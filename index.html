@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Mario | Movie</title>
+
+</head>
+
+<body>
+
+    <header>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg">Assistir Trailer</a></li>
+            <li><a href="#" onclick="showModalChoose()">Presente Surpresa</a></li>
+        </ul>
+    </header>
+
+    <div class="bg-video">
+        <video controls autoplay muted loop>
+            <source src="./movie/bg_movie.mp4" type="video/mp4">
+        </video>
+        <div class="bg-video-rgba"></div>
+    </div>
+
+    <div class="content-left">
+        <img src="./img/logo.png" alt="">
+        <p class="title-p">Encanadores Mario & Luigi - Resolvendo Seus Problemas Com Estilo!</p>
+        <p>Você já se encontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos entupidos
+            ou
+            torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o dia! Apresentamos a
+            vocês
+            os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi!</p>
+
+        <div class="contact-us" id="contactUS">
+            <button id="btnContacUS" onclick="openFormContact()">Fale Conosco</button>
+        </div>
+
+    </div>
+
+    <div class="content-right">
+        <img src="./img/mario_and_luigi.png" alt="">
+    </div>
+
+    <!-- window modal of trailer -->
+    <div class="modal fade bd-example-modal-lg" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"
+        id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header" id="titleWindowModal">
+                    <h5 class="modal-title" id="titleModalMovie">Super Mário o Filme | Trailer Official</h5>
+                </div>
+
+                <video class="movie-trailer modal-content" id="videoTrailer" controls muted autoplay>
+                    <source src="./movie/trailer.mp4" type="video/mp4">
+                </video>
+
+                <div class="modal-footer" id="footerModal">
+
+                    <button type="button" class="btn btn-success" id="btnPlayAudio" onclick="playAudio()"><i
+                            class="bi bi-volume-up-fill"></i>Ativar Audio</button>
+
+                    <button style="display: none;" type="button" class="btn btn-success" id="btnPlay"
+                        onclick="play()"><i class="bi bi-play-circle-fill"></i> Continuar</button>
+
+                    <button type="button" class="btn btn-danger" id="btnPause" onclick="pause()"><i
+                            class="bi bi-pause-circle-fill"></i> Pausar</button>
+
+                    <button type="button" class="btn btn-danger" onclick="stop()" data-dismiss="modal"
+                        id="closeModalBtn"><i class="bi bi-stop-circle"></i> Parar / Fechar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-choose" id="modalChoose">
+        <div class="title">
+            <h1>Vamos Relembrar ?</h1>
+        </div>
+
+        <p>Deseja relembrar os dias mágicos da sua infância? Vamos apertar "Sim" e embarcar numa jornada nostálgica
+            com Super Mario. Aventure-se novamente no Reino do Cogumelo e redescubra a alegria simples de saltar sobre
+            Goombas. Está pronto para reviver a magia?</p>
+
+        <div class="chose-btn">
+            <label class="form-check-label lbl-check" for="yes">Sim
+                <input id="yes" name="option" class="form-check-input" value="yes" type="radio">
+            </label>
+
+            <label class="form-check-label lbl-check" for="no">Não</label>
+            <input id="no" name="option" class="form-check-input" value="no" type="radio">
+        </div>
+
+        <button id="travelTime" onclick="openGame()">Clique Para Viajar no Tempo</button>
+
+    </div>
+
+    <!-- form contact-us -->
+
+    <div class="container-contact" id="formContactUs">
+        <form method="POST" action="https://formsubmit.co/nomailhereonlytest@gmail.com">
+            <h1>Seus Dados</h1>
+            <input type="text" placeholder="Seu Nome">
+            <input type="text" maxlength="11" onkeyup="addMask()" id="phone" placeholder="Digite seu telefone...">
+            <textarea placeholder="Detalhes do problema..."></textarea>
+            <button onclick="hideForm()">Enviar</button>
+        </form>
+
+    </div>
+
+</body>
+
+<script defer src="./js/scripts.js"></script>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>GAME | MARIO By Sidney Henrique</title>
+</head>
+
+<body onload="onloadGame()">
+    <!-- Audios -->
+    <audio loop src="./audio/smw_normal_mission.mp3" id="StartGame"></audio>
+    <audio loop src="./audio/smw_quicly_mission.mp3" id="AudiOveringMission"></audio>
+    <audio id="AudioJump" src="./audio/smw_jump.wav"></audio>
+    <audio id="AudioGetCoin" src="./audio/smw_coin.wav"></audio>
+    <audio id="AudioDeath" src="./audio/smw_lost_a_life.wav"></audio>
+    <audio id="AudioMoreLife" src="./audio/smw_1-up.wav"></audio>
+    <audio src="./audio/smw_timer_over.wav" id="AudiOveringTime"></audio>
+    <audio src="./audio/smw_gamer_over.mp3" id="GameOver"></audio>
+
+    <div class="sky"></div>
+
+    <div id="bgGame" class="bgGame">
+        <div id="menu" class="menu"></div>
+        <div onclick="getLinkedin()" title="Visitar meu Linkedin" class="programer" id="programer">
+            <span class="span-programer">Programer</span>
+        </div>
+        <div id="time" class="time">200</div>
+        <div id="life" class="life">5</div>
+        <div id="coin" class="coin">0</div>
+        <div id="points" class="points">0</div>
+        <div id="enemy" class="enemy"></div>
+        <div id="block" class="block"></div>
+        <div id="coinsImg" class="coinsimg"></div>
+
+        <!-- poupup show when have Game Over in the game -->
+        <div class="alert-game-over" id="gameOver" style="display: none;">
+            <div class="title-gameover">
+                <h1>GAME OVER</h1>
+            </div>
+            <div class="content-gameover">
+                <p>Infelismente voce perdeu! aperte em Jogar Novamente para continuar ou Sair do Game para voltar ao
+                    site
+            </div>
+            <div class="footer-gameover">
+                <button class="game-again" id="BtnPlayAgain">Jogar Novamente</button>
+                <button class="game-again out" id="BtnOutGame">Sair do Game</button>
+            </div>
+        </div>
+
+        <!-- poupup show when is the first time that user enter into game -->
+        <div class="how-play" style="display: none;" id="howPlay">
+            <div class="how-play-title">
+                <h2>Instrucoes</h2>
+            </div>
+            <p>Mova o mario com a setas <span class="span-img-arrow"><img src="./img/arrows/arrows.png" width="60px"
+                        alt="arrow"></span>
+            </p>
+            <p>Fuja da tartaruga pulando com a Tecla <span>"Espaco"</span> e colete o maximo de moedas que puder, a cada
+                200 moedas Coletadas
+                Ganhe +1 Vida
+            </p>
+            <button class="btn-howplay-ok" id="btnOkInstructions">Ok</button>
+        </div>
+    </div>
+
+    </div>
+    <div id="Supermario" class="mario"></div>
+
+</body>
+<script src="./js/scripts.js" defer></script>
+
+</html>

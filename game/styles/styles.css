@@ -1,0 +1,326 @@
+@font-face {
+    font-family: "Super Mario World" ;
+    src: url(../fonts/SuperMarioWorld.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Super Mario World";
+    font-size: 24px;
+}
+
+.bgGame{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/cenaryOne.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.sky{
+
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/cenarySkyGame.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+
+}
+
+.jumpMarioPressKey{
+    animation: jumpMario 0.8s alternate linear;
+}
+
+.mario{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/marioStopedRight.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    bottom: 68px;
+    left: 0;
+    
+}
+
+@keyframes jumpMario {
+    0%{
+        bottom: 70px;
+    }
+
+    50%{
+        bottom: 240px;
+    }
+
+    100%{
+
+    }
+    
+}
+
+.enemy{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/enemyLeft.gif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    bottom: 70px;
+    right: 0;
+    animation: moveEnemy 18s linear infinite ;
+  
+}
+
+/* Move enemy */
+@keyframes moveEnemy {
+    from {
+        right: 0; 
+    }
+    to {
+        right: 120%; 
+    }
+}
+
+
+.menu{
+    position: absolute;
+    width: 900px;
+    height: 150px;
+    background-image: url(../img/menuGame.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    top: 20px;
+   
+}
+
+.time{
+   position: absolute;
+   top: 92px;
+   right: 500px;
+   color: #ffdf73; 
+}
+
+.life{
+    position: absolute;
+    top: 103px;
+    left: 320px;
+    color: #fff;
+}
+
+.coin{
+    position: absolute;
+    top: 70px;
+    right: 250px;
+    color: #fff;
+}
+
+.points{
+    position: absolute;
+    top: 110px;
+    right: 250px;
+    color: #fff;
+}
+
+.coinsimg{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/coin.gif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    right: 414px;
+    top: 272px;
+    display: none;
+   
+}
+
+
+.coinsimg.coinUp {
+    animation: coinUp 0.1s linear;
+
+    transform: translateY(0);
+}
+
+@keyframes coinUp {
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+
+.block{
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-image: url(../img/block.gif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    right: 380px;
+    top: 280px;
+    
+}
+
+.block.moveBlocktoUP {
+    animation: moveBlocktoUP 0.1s linear;
+
+    transform: translateY(0);
+}
+
+@keyframes moveBlocktoUP {
+    to {
+        transform: translateY(-5%);
+    }
+}
+
+.alert-game-over{
+    width: 600px;
+    height: 500px;
+    background-color: #ffdf73;
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+    animation: zoomIn 8s ease-out forwards;
+    /* z-index: 1; */
+    
+}
+
+@keyframes zoomIn {
+
+    from{
+        transform: scale(0.6);
+    }
+
+    to{
+        transform: scale(1.0);
+    }
+    
+}
+
+.title-gameover{
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+.content-gameover{
+    margin-top: 10%;
+}
+
+.footer-gameover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    position: fixed;
+    margin-top: 4.8rem;
+    margin-left: 20px;
+}
+
+.footer-gameover .game-again{
+   width: 250px;
+   text-align: center;
+   padding: 8px;
+   cursor: pointer;
+   border: 4px solid #000;
+   background-color: rgba(34,139,34, 0.4);
+   
+}
+
+.footer-gameover .game-again:hover{
+  opacity: 0.5;
+    
+ }
+
+ .footer-gameover .game-again:active{
+    opacity: 0.8;
+    border: 2px solid #000;    
+   }
+
+ .footer-gameover .out{
+    background-color: rgba(218,165,32, 0.4);
+ }  
+
+
+ .how-play{
+    display: flex;
+    flex-direction: column;
+    width: 690px;
+    height: 450px;
+    background-color: #ffdf73;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6% 28% 6% 28%;
+    gap: 1rem;
+    padding: 20px;
+    z-index: 1;
+    
+ }
+
+ .how-play > p{
+    text-align: center;
+ }
+
+ .span-img-arrow{
+    position: relative;
+    top: 22px;
+ }
+
+ .btn-howplay-ok{
+    padding: 15px;
+    border: 4px solid #000;
+    cursor: pointer;
+    width: 150px;
+ }
+
+ .btn-howplay-ok:hover{
+    opacity: 0.5;
+ }
+
+ .btn-howplay-ok:active{
+    opacity: 0.8;
+    border: 2px solid #000;
+ }
+
+ .programer{
+    background-image: url(../img/ProgramerGame.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    margin-right: 4px;
+    margin-top: 1px;
+    top: 54px;
+    box-shadow: 0px 4px 4px 8px rgba(18, 88, 168, 0.4);
+    border-radius: 12% 12% 12% 12%;
+    cursor: pointer;  
+ }
+
+ .span-programer{
+    position:absolute;
+    top: 100px;
+    margin-left: -46px;
+    color: #ffdf73;
+ }
