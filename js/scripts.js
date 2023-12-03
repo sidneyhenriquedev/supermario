@@ -98,6 +98,7 @@ checkyes.addEventListener('click', function () {
     }
 })
 
+// Here I desability because here stay in localhost, for github use the code down
 // function openGame() {
 //     window.location.href = '../game/index.html'
 // }
