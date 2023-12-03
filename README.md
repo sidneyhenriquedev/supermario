@@ -31,7 +31,7 @@ Se você quiser contribuir para o desenvolvimento do jogo, siga estas etapas:
 ## Autor
 
 Sidney Henrique
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-linkedin.com/in/sidney-henrique-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/sidney-henrique)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Visit%20Profile-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/sidney-henrique)
 
 
 ## Licença
