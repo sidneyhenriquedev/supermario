@@ -5,8 +5,8 @@ Bem-vindo ao Super Mario Game! Este é um jogo clássico do Mario desenvolvido e
 ## Como Jogar
 
 1. Abra o arquivo `index.html` no seu navegador.
-2. Use as setas do teclado para controlar o Mario.
-3. Supere os obstáculos, colete moedas e chegue à bandeira no final de cada fase.
+2. Clique no menu Presente Surpresa e Escolha a Opçao SIM.
+3. Siga as instruçoes que será mostrada no início do Game.
 
 ## Pré-requisitos
 
@@ -14,9 +14,9 @@ Certifique-se de ter um navegador web moderno que suporte HTML5 e JavaScript.
 
 ## Estrutura do Projeto
 
-- `index.html`: Página principal do jogo.
-- `style.css`: Estilos CSS para a aparência do jogo.
-- `script.js`: Lógica do jogo em JavaScript.
+- `index.html`: Página principal do Site.
+- `style.css`: Estilos CSS do Site.
+- `script.js`: Linguagem de Programação do Site e do Game.
 
 ## Contribuindo
 
@@ -31,6 +31,8 @@ Se você quiser contribuir para o desenvolvimento do jogo, siga estas etapas:
 ## Autor
 
 Sidney Henrique
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-linkedin.com/in/sidney-henrique-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/sidney-henrique)
+
 
 ## Licença
 
