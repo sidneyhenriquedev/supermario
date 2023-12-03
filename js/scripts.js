@@ -98,8 +98,12 @@ checkyes.addEventListener('click', function () {
     }
 })
 
+// function openGame() {
+//     window.location.href = '../game/index.html'
+// }
+
 function openGame() {
-    window.location.href = '../game/index.html'
+    window.location.href = 'https://sidneyhenriquedev.github.io/supermario/game/index.html'
 }
 
 checkno.addEventListener('click', function () {
