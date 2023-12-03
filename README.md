@@ -12,6 +12,8 @@ Bem-vindo ao Super Mario Game! Este é um jogo clássico do Mario desenvolvido e
 
 Certifique-se de ter um navegador web moderno que suporte HTML5 e JavaScript.
 
+<img src="/img/bg_site.jpeg/"/>
+
 ## Estrutura do Projeto
 
 - `index.html`: Página principal do Site.
